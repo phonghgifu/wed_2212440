@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas và Form</title>
+    <script type="text/javascript">
+        window.addEventListener('load', eventWindowLoaded, false);
+
+        function eventWindowLoaded() {
+            canvasApp();
+        }
+
+        function canvasApp() {
+            var theCanvas = document.getElementById('canvas-dau-tien');
+            var my_canvas = theCanvas.getContext('2d');
+            my_canvas.strokeRect(0, 0, 200, 225);
+
+            // Vẽ mặt cười
+            my_canvas.beginPath();
+            my_canvas.arc(100, 100, 75, 0, 2 * Math.PI, false);
+            my_canvas.strokeStyle = "black";
+            my_canvas.lineWidth = 3;
+            my_canvas.fillStyle = "yellow";
+            my_canvas.stroke();
+            my_canvas.fill();
+            my_canvas.closePath();
+
+            // Vẽ mắt trái
+            my_canvas.fillStyle = "black";
+            my_canvas.beginPath();
+            my_canvas.arc(65, 70, 10, 0, 2 * Math.PI, false);
+            my_canvas.stroke();
+            my_canvas.fill();
+            my_canvas.closePath();
+
+            // Vẽ mắt phải
+            my_canvas.beginPath();
+            my_canvas.arc(135, 70, 10, 0, 2 * Math.PI, false);
+            my_canvas.stroke();
+            my_canvas.fill();
+            my_canvas.closePath();
+
+            // Vẽ miệng cười
+            my_canvas.lineWidth = 6;
+            my_canvas.beginPath();
+            my_canvas.arc(99, 120, 35, 0, Math.PI, false);
+            my_canvas.stroke();
+            my_canvas.closePath();
+
+            // Viết chữ
+            my_canvas.fillStyle = "black";
+            my_canvas.font = '20px _sans';
+            my_canvas.fillText("Xin chao canvas!", 45, 200);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas-dau-tien" width="200" height="225"></canvas>
+
+    <form action="process_form.php" method="post">
+        <label for="name">Tên:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Tin nhắn:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <input type="submit" value="Gửi">
+    </form>
+</body>
+</html>

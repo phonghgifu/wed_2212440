@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nhập Thông Tin</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, textarea, button, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[disabled], textarea[disabled] {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <!-- Nhập thông tin trong một hàng -->
+        <label for="form-city">Tỉnh/Thành phố:</label>
+        <input type="text" name="city" id="form-city" value="Đà Lạt" maxlength="50">
+        <label for="form-comment">Nhận xét của bạn về cuốn sách:</label>
+                <textarea name="nhan-xet" id="form-comment" cols="30" rows="10" placeholder="Nhận xét không quá 50 từ"></textarea>
+        <label for="disabled-input">Không thể chỉnh sửa:</label>
+        <input type="text" name="disabled-input" id="disabled-input" value="Không thể chỉnh sửa" disabled>
+        <label for="readonly-input">Chỉ đọc:</label>
+        <input type="text" name="readonly-input" id="readonly-input" value="Chỉ đọc" readonly>
+        <label for="form-mat-khau">Mật khẩu:</label>
+        <input type="password" name="mat-khau" maxlength="8" id="form-mat-khau">
+        <label for="form-search">Tìm kiếm:</label>
+        <input type="search" name="search" id="form-search">
+        <label for="form-email">Email:</label>
+        <input type="email" name="email" id="form-email">
+        <!-- Nhập số điện thoại -->
+        <label for="form-tel">Số điện thoại:</label>
+        <input type="tel" name="tel" id="form-tel">
+        <!-- Nhập URL -->
+        <label for="form-url">Website:</label>
+        <input type="url" name="url" id="form-url">
+        <label for="form-sach">Các cuốn sách bạn đã đọc khi là sinh viên:</label>
+        <input type="text" list="sach" id="form-sach">
+        <datalist id="sach">
+            <option value="Khuyến học"></option>
+            <option value="Đúng việc"></option>
+            <option value="Khởi hành"></option>
+            <option value="Trên đường băng"></option>
+            <option value="Nhà giả kim"></option>
+        </datalist>
+        <input type="submit" value="Đăng nhập">
+        <input type="reset" value="Làm lại">
+        <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+        <input type="button" value="Nút bấm">
+        <button>Nút bấm</button>
+        <fieldset>
+            <legend>Bạn bao nhiêu tuổi?</legend>
+            <ol>
+                <li><label><input type="radio" name="tuoi" value="duoi24" checked> dưới 24</label></li>
+                <li><label><input type="radio" name="tuoi" value="25-34"> 25 tới 34</label></li>
+                <li><label><input type="radio" name="tuoi" value="35-44"> 35 tới 44</label></li>
+                <li><label><input type="radio" name="tuoi" value="tren45"> 45+</label></li>
+            </ol>
+        </fieldset> 
+        <fieldset>
+            <legend>Thói quen đọc của bạn là gì?</legend>
+            <ol>
+                <li><label><input type="checkbox" name="nguon" value="sach-giay" checked> sách giấy</label></li>
+                <li><label><input type="checkbox" name="nguon" value="ebook" checked> sách điện tử</label></li>
+                <li><label><input type="checkbox" name="nguon" value="mang-xa-hoi"> mạng xã hội</label></li>
+                <li><label><input type="checkbox" name="nguon" value="nghe-doc"> nghe người khác đọc</label></li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Bạn có muốn nhận thông báo khi có sách mới?</legend>
+            <ol>
+                <li><label><input type="checkbox" name="thong-bao" value="co"> có, đồng ý nhận thông báo vào hộp thư</label></li>
+            </ol>
+        </fieldset>
+        <p>Trong các quyển sách sau, bạn thích quyển nào nhất?</p>
+        <select name="thich-nhat">
+            <option value="khuyen-hoc">Khuyến học</option>
+            <option>Đúng việc</option>
+            <option>Khởi hành</option>
+            <option>Trên đường băng</option>
+            <option>Nhà giả kim</option>
+        </select>
+        <p>Trong các quyển sách sau, bạn thích quyển nào?</p>
+        <select name="thich-nhat" size="4" multiple>
+            <option>Khuyến học</option>
+            <option selected>Đúng việc</option>
+            <option selected>Khởi hành</option>
+            <option>Trên đường băng</option>
+            <option>Nhà giả kim</option>
+        </select>
+        <p>Trong các quyển sách sau, bạn thích quyển nào?</p>
+        <select name="thich-nhat" size="7" multiple>
+            <optgroup label="Sách dịch">
+                <option>Khuyến học</option>
+                <option selected>Khởi hành</option>
+                <option>Nhà giả kim</option>
+            </optgroup>
+            <optgroup label="Sách Việt">
+                <option>Trên đường băng</option>
+                <option selected>Đúng việc</option>
+            </optgroup>
+        </select>
+        <form action="/client.php" method="POST" enctype="multipart/form-data">
+            <label>Gửi ảnh đại diện của bạn <em>(tùy chọn)</em><br>
+                <input type="file" name="photo" size="28">
+            </label>
+        </form>
+        <input type="hidden" name="step" value="1">
+     
+        <label for="ngay-dat-ve">Ngày đặt vé:</label>
+        <input type="date" name="ngay-dat-ve" value="2023-02-17" id="ngay-dat-ve">
+        <label for="gio-dat-ve">Giờ đặt vé:</label>
+        <input type="time" name="gio-dat-ve" value="10:53:30" id="gio-dat-ve">
+        <label for="ngay-gio-dat-ve">Ngày giờ đặt vé:</label>
+        <input type="datetime-local" name="ngay-gio-dat-ve" value="2023-02-17T13:54:02" id="ngay-gio-dat-ve">
+        <label for="thang">Tháng:</label>
+        <input type="month" name="thang" value="2023-02" id="thang">
+        <label for="tuan">Tuần:</label>
+        <input type="week" name="tuan" id="tuan">
+      
+        <label for="so-luong">Số sách bạn đã đọc:</label>
+        <input type="number" name="so-luong" min="0" max="1000" id="so-luong">
+        <label for="hai-long">Mức độ hài lòng (0 tới 10):</label>
+        <input type="range" name="hai-long" min="0" max="10" step=".5" id="hai-long">
+

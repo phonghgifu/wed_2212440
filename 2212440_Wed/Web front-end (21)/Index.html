@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Ngữ Nghĩa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Ngữ Nghĩa</h1>
+    <form id="form-dang-ky">
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <label for="form-ho-ten">Họ tên:</label>
+            <input type="text" name="ho-ten" id="form-ho-ten" required>
+            
+            <label for="form-email">Email:</label>
+            <input type="email" name="email" id="form-email" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Bạn bao nhiêu tuổi?</legend>
+            <ol>
+                <li><label><input type="radio" name="tuoi" value="duoi24" checked> dưới 24</label></li>
+                <li><label><input type="radio" name="tuoi" value="25-34"> 25 tới 34</label></li>
+                <li><label><input type="radio" name="tuoi" value="35-44"> 35 tới 44</label></li>
+                <li><label><input type="radio" name="tuoi" value="tren45"> 45+</label></li>
+            </ol>
+        </fieldset>
+        
+        <button type="submit">Gửi</button>
+    </form>
+</body>
+</html>
