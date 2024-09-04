@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điểm</title>
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bảng Điểm Sinh Viên</h2>
+    <table>
+        <tr>
+            <th>Mã SV</th>
+            <th colspan="2">Họ Tên</th>
+            <th>Điểm</th>
+        </tr>
+        <tr>
+            <td>00112233</td>
+            <td>Nguyễn Văn</td>
+            <td>Tèo</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>00112244</td>
+            <td>Trần Văn</td>
+            <td>Tít</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <h2>Ví dụ về bảng với tiêu đề nằm ở đầu hàng:</h2>
+    <table>
+        <tr>
+            <th>Quý</th>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+            <td>IV</td>
+        </tr>
+        <tr>
+            <th>Sản lượng</th>
+            <td>30</td>
+            <td>36</td>
+            <td>37</td>
+            <td>38</td>
+        </tr>
+    </table>
+
+    <h2>Ví dụ về bảng với thuộc tính colspan và rowspan:</h2>
+    <table border="1">
+        <tr>
+            <th>Mã SV</th>
+            <th colspan="2">Họ Tên</th>
+            <th>Điểm</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>00112233</td>
+            <td>Nguyễn Văn</td>
+            <td>Tèo</td>
+            <td>7</td>
+            <td rowspan="2">CNTT1</td>
+        </tr>
+        <tr>
+            <td>00112244</td>
+            <td>Trần Văn</td>
+            <td>Tít</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>00112255</td>
+            <td>Lê Văn</td>
+            <td>Mít</td>
+            <td>9</td>
+            <td>CNTT2</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web của Bác Tèo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .svg-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chào mừng đến với trang web của Bác Tèo</h1>
+        <p>Đây là một ví dụ về cách tạo một trang web đơn giản bằng HTML.</p>
+        
+        <h2>Hình ảnh SVG</h2>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" aria-label="Bác Tèo logo">
+                <rect width="200" height="60" fill="black" rx="20" ry="20" />
+                <text x="10" y="40" fill="white" font-family="Arial" font-size="16">bác Tèo</text>
+            </svg>
+        </div>
+
+        <h2>Hình ảnh Pizza SVG</h2>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="100" height="100" aria-label="Pizza illustration">
+                <circle fill="#D4AB00" cx="36" cy="36" r="36"/>
+                <circle opacity=".7" fill="#FFF" stroke="#8A291C" cx="36.1" cy="35.9" r="31.2"/>
+                <circle fill="#A52C1B" cx="38.8" cy="13.5" r="4.8"/>
+                <circle fill="#A52C1B" cx="22.4" cy="20.9" r="4.8"/>
+                <circle fill="#A52C1B" cx="32" cy="37.2" r="4.8"/>
+                <circle fill="#A52C1B" cx="16.6" cy="39.9" r="4.8"/>
+                <circle fill="#A52C1B" cx="26.2" cy="53.3" r="4.8"/>
+                <circle fill="#A52C1B" cx="42.5" cy="27.3" r="4.8"/>
+                <circle fill="#A52C1B" cx="44.3" cy="55.2" r="4.8"/>
+                <circle fill="#A52C1B" cx="54.7" cy="42.9" r="4.8"/>
+                <circle fill="#A52C1B" cx="56" cy="28.3" r="4.8"/>
+            </svg>
+        </div>
+
+        <h2>Chèn ảnh SVG bằng object</h2>
+        <object type="image/svg+xml" data="berger.svg" aria-label="Berger">
+            <div style="background-image: url('pizza.png'); width: 100px; height: 100px;" role="img" aria-label="pizza"></div>
+        </object>
+    </div>
+</body>
+</html>
