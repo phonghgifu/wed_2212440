@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* Set box-sizing model */
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+/* Kiểu dáng chung */
+body {
+    font-family: Georgia, serif;
+    font-size: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Kiểu dáng liên kết */
+a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    padding-bottom: .1em;
+    color: #DC6903;
+}
+a:focus, a:hover, a:active {
+    color: #F9AB33;
+}
+
+/* Kiểu dáng tiêu đề */
+header {
+    color: white;
+    background: url(croissants_banner.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    height: 15em;
+    padding: 20px 0;
+}
+header p {
+    font-style: italic;
+    font-size: 1.2em;
+    padding: 10px 0;
+    margin-top: -12px;
+}
+header h1 {
+    margin-top: 1.5em;
+}
+
+/* Kiểu dáng điều hướng */
+nav, footer {
+    font-family: verdana, sans-serif;
+    background-color: #783F27;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding: 10px 15px;
+}
+nav ul li a {
+    text-decoration: none;
+}
+
+/* Kiểu dáng chính "products" */
+main {
+    font-family: 'Stint Ultra Expanded', cursive;
+    background-color: white;
+    line-height: 1.8em;
+    color: #555;
+    padding: 1em;
+    border: double 4px #EADDC4;
+    border-radius: 25px;
+    margin: 2.5%;
+}
+h3 {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #7A0002;
+    padding-left: 1em;
+    margin-top: 2.5em;
+    border-top: 1px solid;
+    border-left: 3px solid;
+}
+p.more {
+    font-family: verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: .8em;
+    padding: 10px 0;
+}
+
+/* Kiểu dáng aside "hours" */
+aside {
+    background: url(scallop.jpg) repeat-y left top;
+    background-color: #F6F3ED;
+    padding: 1em;
+    padding-left: 45px;
+    border-top-right-radius: 25px;
+    margin: 1em 2.5% 0 10%;
+}
+
+/* Kiểu dáng khác */
+footer {
+    color: #EADDC4;
+    text-align: center;
+    font-size: .8em;
+    padding: 1em;
+}
+h2 {
+    font-family: 'Stint Ultra Expanded', cursive;
+}
+.day {
+    color: #783F27;
+    font-family: verdana, sans-serif;
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
