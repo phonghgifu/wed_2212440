@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ngô Văn Phong | Hồ sơ cá nhân</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5468db3c8c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #129062;
+      padding: 45px 0;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      text-align: center;
+    }
+
+    .avatar {
+      border-radius: 100px;
+      width: 100px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-family: "Lobster", cursive;
+      margin: 10px 0 8px 0;
+      font-size: 28px;
+    }
+
+    p {
+      font-family: system-ui;
+      width: 450px;
+      margin: 0 auto 20px;
+      line-height: 1.5;
+    }
+
+    @media only screen and (max-width: 600px) {
+      p {
+        width: 90%;
+      }
+    }
+
+    .button {
+      margin-bottom: 15px;
+      background-color: white;
+      border: 0;
+      width: 300px;
+      padding: 15px 0;
+      border-radius: 100px;
+      font-family: "Roboto Condensed", cursive;
+      font-size: 15px;
+      transition: 0.3s;
+      box-shadow: 0px 11px 22px -9px #000000;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .button i {
+      margin-right: 8px;
+    }
+
+    .button:hover {
+      color: white;
+      background-color: black;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #eee;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="avatar" src="images/phong.jpg" alt="Avatar Ngô Văn Phong">
+  <h3>Ngô Văn Phong</h3>
+  <p>Mình là sinh viên ngành Công nghệ phần mềm tại Đại học Đà Lạt. Mình yêu thích lập trình, UI/UX và xây dựng các dự án cá nhân. Mục tiêu là trở thành một lập trình viên full-stack chuyên nghiệp.</p>
+
+  <div>
+    <button class="button" onclick="location.href='tel:0123456789'">
+      <i class="fas fa-phone-alt"></i> Gọi điện cho mình
+    </button><br>
+    <button class="button" onclick="location.href='mailto:ngovanphong@gmail.com'">
+      <i class="fas fa-envelope"></i> Gửi email
+    </button><br>
+    <button class="button" onclick="location.href='https://facebook.com/phongismancold'">
+      <i class="fab fa-facebook"></i> Facebook
+    </button><br>
+    <button class="button" onclick="location.href='https://github.com/phonghgifu'">
+      <i class="fab fa-github"></i> GitHub
+    </button>
+  </div>
+
+  <footer>
+    &copy; 2025 Ngô Văn Phong | Blog cá nhân ngành phần mềm
+  </footer>
+
+</body>
+</html>
